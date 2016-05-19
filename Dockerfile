@@ -2,8 +2,9 @@ FROM tutum/apache-php
 MAINTAINER Ergin BULUT <ergin@erginbulut.com>
 
 RUN apt-get update \
-	DEBIAN_FRONTEND=noninteractive apt-get -yq install \
+	&& apt-get -yq install \
 	wget \
+	php5-memcache \
     && apt-get -y upgrade \
     && apt-get clean \
     && apt-get autoclean \

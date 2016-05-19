@@ -18,7 +18,8 @@ Assuming you have your content at /var/sites/mysite/, the below will be sufficie
 - Serving actual content with SSL support: `docker run -p 80:80 -p 443:443 -v /var/sites/mysite/:/var/www/ -d ergin/apache2-php5`
 - ... without SSL support: `docker -p 80:80 -v /var/sites/mysite/:/var/www/ -d ergin/apache2-php5`
 - ... using non-standard ports: `docker -p 8080:80 -p 8443:443 -v /var/sites/mysite/:/var/www/ -d ergin/apache2-php5`
-- Working with MySQL, Memcached and ALLOW_OVERRIDE set as true: `docker run --name erginbulut.com --link mysql-container:mysql-container --link memcached-container:memcached-container -p 80:80 -p 443:443 -v /var/sites/mysite/:/var/www/ -d -e ALLOW_OVERRIDE=true ergin/apache2-php5`
+- Working with MySQL, Memcached and ALLOW_OVERRIDE option set as true:
+- ... `docker run --name erginbulut.com --link mysql-container:mysql-container --link memcached-container:memcached-container -p 80:80 -p 443:443 -v /var/sites/mysite/:/var/www/ -d -e ALLOW_OVERRIDE=true ergin/apache2-php5`
 
 ## A note on SSL ##
 
